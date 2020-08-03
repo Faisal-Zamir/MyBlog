@@ -1,0 +1,17 @@
+{%  extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+	{% block content %}
+
+      <form action="" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value='Publish'>
+        </form>
+        {% for msg in messages %}
+        {{ msg }}
+        
+        {% endfor %}
+    {% endblock %}
+    
+	
+	

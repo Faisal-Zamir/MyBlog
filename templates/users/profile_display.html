@@ -1,0 +1,27 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+
+
+
+<style>
+    .glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+    
+    small {
+    display: block;
+    line-height: 1.428571429;
+    color: #999;
+    }    
+</style>
+
+<div class="card mt-3" style="width: 18rem;">
+    <img class="card-img-top" src="{{ user.profile.image.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{user.username}}</h5>
+      <p class="card-text">{{user.email}}</p>
+      <a href="{% url 'profile' %}" class="btn btn-primary">Edit Profile</a>
+    </div>
+  </div>
+
+<br><br>
+{% endblock content %}
