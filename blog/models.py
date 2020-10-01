@@ -6,6 +6,7 @@ from django.urls import reverse
 
 
 class Post(models.Model):
+    sno = models.AutoField(primary_key = True)
     title = models.CharField(max_length=100)
     content = models.TextField()
     slug = models.SlugField(blank=True, null=True, )
